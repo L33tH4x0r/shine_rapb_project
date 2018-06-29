@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: shine
+  password: C35ar3_7411
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: shine_development
+  host: localhost
+  username: shine
+  password: C35ar3_7411
+
+test:
+  <<: *default
+  database: shine_test
+
+production:
+  <<: *default
+  database: shine_production
+  username: shine
+  password: <%= ENV['SHINE_DATABASE_PASSWORD'] %>
