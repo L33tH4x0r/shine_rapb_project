@@ -13,7 +13,15 @@
 
   <body>
     <div class="container">
-      <h1>Rails: <%= Rails.env %></h1>
+      <% if notice.present? %>
+        <aside class="alert alert-info">
+          <%= notice %>
+        </aside>
+      <% elsif alert.present? %>
+        <aside class="alert alert-danger">
+          <%= alert %>
+        </aside>
+      <% end %>
       <%= yield %>
     </div>
   </body>
