@@ -21,6 +21,10 @@
         <aside class="alert alert-danger">
           <%= alert %>
         </aside>
+      <% elsif devise_error_messages!.present? %>
+        <aside class="alert alert-danger">
+          <%= devise_error_messages! %>
+        </aside>
       <% end %>
       <%= yield %>
     </div>
