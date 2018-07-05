@@ -4,7 +4,7 @@
   </h1>
 </header>
 <section class="search-form">
-  <%= form_for :customers, methods: :get do |f| %>
+  <%= form_for :customers, method: :get do |f| %>
     <div class="input-group input-group-lg">
       <%= label_tag :keywords, nil, class: "sr-only" %>
       <%= text_field_tag :keywords,
