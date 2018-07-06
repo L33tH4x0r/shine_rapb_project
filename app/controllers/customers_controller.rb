@@ -1,4 +1,6 @@
 class CustomersController < ApplicationController
+  PAGE_SIZE = 10
+
   def index
     if params[:keywords].present?
       @keywords = params[:keywords]
